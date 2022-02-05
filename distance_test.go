@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/midbel/maestro/distance"
+	"github.com/midbel/distance"
 )
 
 func TestGetLevenshteinDistance(t *testing.T) {
