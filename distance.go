@@ -65,14 +65,14 @@ func GetLevenshteinDistance(fst, snd string) int {
 
 	for i := 1; i < zfst; i++ {
 		for j := 1; j < zsnd; j++ {
-			var cost, del, ins, sub int
+			var cost int
 			if fst[i-1] != snd[j-1] {
 				cost++
 			}
 
-			del = matrix[j-1][i] + 1
-			ins = matrix[j][i-1] + 1
-			sub = matrix[j-1][i-1] + cost
+			del := matrix[j-1][i] + 1
+			ins := matrix[j][i-1] + 1
+			sub := matrix[j-1][i-1] + cost
 			matrix[j][i] = minimum(del, ins, sub)
 		}
 	}
