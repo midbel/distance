@@ -15,6 +15,10 @@ func Hamming(str string, others []string) []string {
 	return set
 }
 
+func JaroWinkler(str string, others []string) []string {
+	return nil
+}
+
 func Levenshtein(str string, others []string) []string {
 	var set []string
 	for i := range others {
